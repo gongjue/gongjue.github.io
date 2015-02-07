@@ -6,7 +6,7 @@ title: JuliaOpt Setting Up
 ## Jan 22
 
 1. Download and Install Julia
-2. Using Package Manager to install the following:
+2. Using Package Manager to install the following
     - `Cbc`
     - `Clp`
     - `GLPK`
@@ -14,19 +14,19 @@ title: JuliaOpt Setting Up
     - `GlpkMathProgBaseInterface` *(Error)*
     - `JuMP`
 3. Package Manager command
-
     ```julia
     Pkg.add('Cbc') // add package named 'Cbc'
     Pkg.status()   // check installed packages
     Pkg.installed()
     Pkg.update()
     ```
+
 4. Add JuliaOpt packages
     - `Convex`
     - `Optim`
     - `Gurobi`
-5. Install IJulia
 
+5. Install IJulia
     ```julia
     Pkg.add("IJulia")
     ```
