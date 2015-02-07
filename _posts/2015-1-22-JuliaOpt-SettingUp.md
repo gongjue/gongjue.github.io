@@ -22,7 +22,6 @@ title: JuliaOpt Setting Up
     Pkg.update()
     ```
 4. Add JuliaOpt packages
-
     - `Convex`
     - `Optim`
     - `Gurobi`
