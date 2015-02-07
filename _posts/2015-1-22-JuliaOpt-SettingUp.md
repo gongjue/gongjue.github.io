@@ -43,7 +43,6 @@ title: JuliaOpt Setting Up
 ## Jan 30
 
 Examples from A Modeling Language for Mathematical Programming by R. Fourer, D.M. Gay and B.W. Kernighan:
-
     - a simple maximum-revenue production model
     - production and distribution planning
     - a static production model of a national fertilizer industry
