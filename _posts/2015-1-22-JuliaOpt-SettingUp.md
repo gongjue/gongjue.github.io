@@ -1,8 +1,9 @@
 ---
 layout: post
-title: JuliaOpt Setting up
+title: JuliaOpt Setting Up
 ---
 
+## Jan 22
 
 1. Download and Install Julia
 2. Using Package Manager to install the following:
@@ -34,19 +35,20 @@ title: JuliaOpt Setting up
 
 
 
-Jan 23
-------
-1. Julia package dir: `~/.julia/`
+## Jan 23
+
+1. Julia package dir: `~/.julia/v3.0/<pkg>`
 
 
-Jan 30
------
+## Jan 30
+
 Examples from A Modeling Language for Mathematical Programming by R. Fourer, D.M. Gay and B.W. Kernighan:
-a simple maximum-revenue production model
-production and distribution planning
-a static production model of a national fertilizer industry
-multi-period production planning
-allocation of cars to trains
+
+    - a simple maximum-revenue production model
+    - production and distribution planning
+    - a static production model of a national fertilizer industry
+    - multi-period production planning
+    - allocation of cars to trains
 
 Rewrite these 5 examples
 
