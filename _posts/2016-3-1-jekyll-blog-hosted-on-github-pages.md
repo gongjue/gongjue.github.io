@@ -22,7 +22,7 @@ gem install github-pages
 gem install pygments.rb
 ```
 
-##Fork a jekyll site on GitHub
+## Fork a jekyll site on GitHub
 
 As a GitHub user, you’re entitled to one free "user" website (as opposed to a "project" website), which will live at http://yourusername.github.io. This space is ideal for hosting a Jekyll blog!
 
@@ -31,7 +31,7 @@ Click the "Settings" button in your new forked repository (in the menu on the ri
 
 Your website will probably go live immediately. You can check by going to http://yourusername.github.io.
 
-##Local modification and Push
+## Local modification and Push
 
 Then `cd` to some directory, and clone the repository you just forked.
 
