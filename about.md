@@ -3,12 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
+I am a PhD student in Industrial Engineering at University of Washington. My research interests are applying methods of artificial intelligence to healthcare problems. My work focuses on building clinical decision support (CDS) systems, the computer assistant to the diagnosis of diseases. 
 
-Some information about you!
+The methods I use a lot in my research include (partially observable) Markov decision process, reinforcement learning, etc. 
 
-### More Information
+My academic website is [here](http://staff.washington.edu/gongjue)
 
-A place to include any other types of information that you'd like to include about yourself. 
+
 
 ### Contact me
 
