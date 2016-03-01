@@ -19,7 +19,6 @@ Then install Jekyll by RubyGems (`gem`)
 gem install jekyll
 gem install jekyll-sitemap
 gem install github-pages
-gem install pygments.rb
 ```
 
 ## Fork a jekyll site on GitHub
