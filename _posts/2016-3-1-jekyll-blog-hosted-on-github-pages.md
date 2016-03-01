@@ -24,12 +24,13 @@ gem install pygments.rb
 
 ## Fork a jekyll site on GitHub
 
-As a GitHub user, you’re entitled to one free "user" website (as opposed to a "project" website), which will live at http://yourusername.github.io. This space is ideal for hosting a Jekyll blog!
+As a GitHub user, you’re entitled to one free "user" website (as opposed to a "project" website), which will live at `http://yourusername.github.io`. This space is ideal for hosting a Jekyll blog!
 
 The best part is that you can simply place your unbuilt Jekyll blog on the master branch of your user repository, and GitHub Pages will build the static website and serve it for you. You don’t have to worry about the build process at all -- it’s all taken care of.
+
 Click the "Settings" button in your new forked repository (in the menu on the right), and change the repository’s name to `yourusername.github.io`, replacing yourusername with your GitHub user name.
 
-Your website will probably go live immediately. You can check by going to http://yourusername.github.io.
+Your website will probably go live immediately. You can check by going to `http://yourusername.github.io`.
 
 ## Local modification and Push
 
@@ -54,6 +55,7 @@ jekyll serve
 then browse [http://127.0.0.1:4000](http://127.0.0.1:4000).
 
 ### Read More
+
 [1] [Jekyll Project Homepage](https://jekyllrb.com)
 
 [2] [Build A Blog With Jekyll And GitHub Pages](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/), By Barry Clark
