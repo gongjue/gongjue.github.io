@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JuliaOpt Setting Up
+title: Setting Up JuliaOpt Packages
 ---
 
 ## Jan 22
