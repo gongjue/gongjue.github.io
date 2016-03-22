@@ -3,6 +3,11 @@ layout: post
 title: Jekyll Blog Hosted on GitHub Pages
 ---
 
+## Test Math
+
+$$ e^{x} = 1 + x + \frac{x}{2!} + \cdots$$
+
+
 ## Install Jekyll on mac
 
 First install ruby from Homebrew (`brew`):
