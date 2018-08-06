@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3: Force layout</title>
+        <script type="text/javascript" src="../d3.js"></script>
+        <style type="text/css">
+            circle {
+              fill: #ccc;
+              stroke: #fff;
+              stroke-width: 1.5px;
+            }
+
+            circle:hover {
+                fill: orange;
+            }
+            
+            #tooltip {
+                position: absolute;
+                width: 200px;
+                height: auto;
+                padding: 10px;
+                background-color: white;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                pointer-events: none;
+            }
+            
+            #tooltip.hidden {
+                display: none;
+            }
+            
+            #tooltip p {
+                margin: 0;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tooltip" class="hidden">
+            <!-- <p><strong>Important Label Heading</strong></p> -->
+            <p><span id="name">100</span></p>
+        </div>
+        <script type="text/javascript">
+
+            //Width and height
+            var w = 1280*2;
+            var h = 1200*2;
+
+            //Create SVG element
+            var svg = d3.select("body")
+                        .append("svg")
+                        .attr("width", w)
+                        .attr("height", h);
+
+            //Initialize a simple force layout, using the nodes and edges in dataset
+            d3.json("graphFile.json", function(dataset) {
+                var force = d3.forceSimulation(dataset.nodes)
+                              .force("charge", d3.forceManyBody())
+                              .force("link", d3.forceLink(dataset.edges))
+                              .force("center", d3.forceCenter().x(w/2).y(h/2));
+                
+                //Create edges as lines
+                var edges = svg.selectAll("line")
+                    .data(dataset.edges)
+                    .enter()
+                    .append("line")
+                    .style("stroke", "#aaa")
+                    .style("stroke-width", function(d) {return d.value});
+                
+                //Create nodes as circles
+                var nodes = svg.selectAll("circle")
+                    .data(dataset.nodes)
+                    .enter()
+                    .append("circle")
+                    .attr("r",  function(d) {return d.value})
+                    // .style("fill", function(d, i) {
+                    //     return colors(i);
+                    // })
+                    .call(d3.drag()  //Define what to do on drag events
+                        .on("start", dragStarted)
+                        .on("drag", dragging)
+                        .on("end", dragEnded))
+                    .on("mouseover", function(d) {
+                    //Get this bar's x/y values, then augment for the tooltip
+                        var xPosition = parseFloat(d.x) + 20;
+                        var yPosition = parseFloat(d.y) - 20;
+
+                        //Update the tooltip position and value
+                        d3.select("#tooltip")
+                            .style("left", xPosition + "px")
+                            .style("top", yPosition + "px")                     
+                            .select("#name")
+                            .text(d.name);
+                        //Show the tooltip
+                        d3.select("#tooltip").classed("hidden", false);
+                        d3.select(this).select("circle").transition()
+                            .duration(500)
+                            .attr("r", 10);
+
+                    })
+                    .on("mouseout", function(d) {
+                        //Hide the tooltip
+                        d3.select("#tooltip").classed("hidden", true);
+                        d3.select(this).select("circle").transition()
+                        .duration(500)
+                        .attr("r", 5);
+                    });
+
+                //Add a simple tooltip
+                nodes.append("title")
+                     .text(function(d) {
+                        return d.name;
+                     });
+                
+                //Every time the simulation "ticks", this will be called
+                force.on("tick", function() {
+
+                    edges.attr("x1", function(d) { return d.source.x; })
+                         .attr("y1", function(d) { return d.source.y; })
+                         .attr("x2", function(d) { return d.target.x; })
+                         .attr("y2", function(d) { return d.target.y; });
+                
+                    nodes.attr("cx", function(d) { return d.x; })
+                         .attr("cy", function(d) { return d.y; });
+        
+                });
+
+                //Define drag event functions
+                function dragStarted(d) {
+                    if (!d3.event.active) force.alphaTarget(0.3).restart();
+                    d.fx = d.x;
+                    d.fy = d.y;
+                }
+
+                function dragging(d) {
+                    d.fx = d3.event.x;
+                    d.fy = d3.event.y;
+                }
+
+                function dragEnded(d) {
+                    if (!d3.event.active) force.alphaTarget(0);
+                    d.fx = null;
+                    d.fy = null;
+                }
+            });
+
+            
+
+        </script>
+    </body>
+</html>
