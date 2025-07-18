@@ -1,0 +1,14 @@
+extends:
+  - stylelint-config-standard-scss
+
+rules:
+  # Allow vendor prefixes
+  property-no-vendor-prefix: null
+  value-no-vendor-prefix: null
+  
+  # Allow empty sources for @import
+  no-empty-source: null
+  
+  # SCSS specific rules
+  scss/at-rule-no-unknown: true
+  scss/selector-no-redundant-nesting-selector: true

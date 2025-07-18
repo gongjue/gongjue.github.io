@@ -1,0 +1,23 @@
+{
+  "name": "gongjue-blog",
+  "version": "2.0.0",
+  "description": "Modern Jekyll blog for Jue Gong",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "clean": "bundle exec jekyll clean",
+    "test": "bundle exec htmlproofer ./_site --disable-external",
+    "lint:css": "stylelint '**/*.scss' '**/*.css'",
+    "lint:html": "bundle exec htmlproofer ./_site --check-html --check-img-http --check-opengraph --enforce-https"
+  },
+  "devDependencies": {
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gongjue/gongjue.github.io.git"
+  },
+  "author": "Jue Gong",
+  "license": "MIT"
+}

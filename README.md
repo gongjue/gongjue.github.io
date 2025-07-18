@@ -1,58 +1,84 @@
-# Jekyll Now
+# Jue Gong's Blog
 
-**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+A modern Jekyll blog built with 2025 best practices, featuring automated deployment, SEO optimization, and responsive design.
 
-**Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
+## Features
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependancies like markdown processors, Pygments, etc
-- If you're on Windows, this will make setting up Jekyll a lot easier
-- It's easy to try out, you can just delete your forked repository if you don't like it
+- **Modern Jekyll 4.3** with latest plugins
+- **Automated GitHub Actions deployment**
+- **SEO optimized** with jekyll-seo-tag
+- **Responsive design** with dark mode support
+- **Modern MathJax 3** for mathematical expressions
+- **Pagination and archives** for better content organization
+- **Performance optimized** with modern web standards
+- **Accessibility compliant** (WCAG 2.1 AA)
 
-In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
+## Prerequisites
 
-![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
-
-## Quick Start
-
-### Step 1) Fork Jekyll Now to your User Repository
-
-Fork this repo, then rename the repository to yourgithubusername.github.io.
-
-Your Jekyll blog will often be viewable immediately at <http://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
-
-![Step 1](/images/step1.gif "Step 1")
-
-### Step 2) Customize and view your site
-
-Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
-
-Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <http://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
-
-> There are 3 different ways that you can make changes to your blog's files:
-
-> 1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
-> 2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
-> 3. Clone down your repository and make updates locally, then push them to your GitHub repository.
-
-![_config.yml](/images/config.png "_config.yml")
-  
-### Step 3) Publish your first blog post
-
-Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
-
-![First Post](/images/first-post.png "First Post")
-
-> You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
+- Ruby 3.1+ 
+- Bundler gem
+- Node.js 18+ (for development tools)
 
 ## Local Development
 
-1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
-2. Clone down your fork `git clone git@github.com:yourusername/yourusername.github.io.git`
-3. Serve the site and watch for markup/sass changes `jekyll serve`
-4. View your website at http://0.0.0.0:4000
-5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
+### 1. Clone and Install Dependencies
+
+```bash
+git clone https://github.com/gongjue/gongjue.github.io.git
+cd gongjue.github.io
+bundle install
+npm install
+```
+
+### 2. Run Development Server
+
+```bash
+# Start Jekyll with live reload
+npm run serve
+
+# Or use bundle directly
+bundle exec jekyll serve --livereload
+```
+
+Visit `http://localhost:4000` to see your site.
+
+### 3. Build for Production
+
+```bash
+npm run build
+```
+
+## Writing Posts
+
+Create new posts in the `_posts` directory with the format: `YYYY-MM-DD-title.md`
+
+```markdown
+---
+layout: post
+title: "Your Post Title"
+categories: [category1, category2]
+tags: [tag1, tag2]
+---
+
+Your content here...
+```
+
+## Deployment
+
+The site automatically deploys via GitHub Actions when you push to the main branch. The workflow:
+
+1. Builds the Jekyll site
+2. Runs tests and linting
+3. Deploys to GitHub Pages
+
+## Configuration
+
+Key settings in `_config.yml`:
+
+- **Site info**: Update `name`, `description`, `url`
+- **Social links**: Configure `footer-links`
+- **Analytics**: Add your Google Analytics ID
+- **Comments**: Configure Disqus shortname
 
 ## Moar!
 
@@ -109,3 +135,39 @@ You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-sta
 - [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
 - [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
 
+
+## Development Commands
+
+```bash
+# Install dependencies
+bundle install && npm install
+
+# Start development server
+npm run serve
+
+# Build for production
+npm run build
+
+# Run tests
+npm run test
+
+# Lint CSS
+npm run lint:css
+```
+
+## 2025 Modernization Features
+
+✅ **Jekyll 4.3** with modern plugin architecture  
+✅ **GitHub Actions CI/CD** for automated deployment  
+✅ **SEO optimization** with structured data and meta tags  
+✅ **Responsive design** with CSS Grid and Flexbox  
+✅ **Dark mode support** respecting system preferences  
+✅ **Modern MathJax 3** for mathematical expressions  
+✅ **Accessibility compliance** (WCAG 2.1 AA)  
+✅ **Performance optimized** with lazy loading and compression  
+✅ **Security headers** and Content Security Policy  
+✅ **Modern development workflow** with linting and testing  
+
+## License
+
+MIT License - feel free to use this for your own projects!
