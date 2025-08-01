@@ -63,6 +63,28 @@ tags: [tag1, tag2]
 Your content here...
 ```
 
+### Adding Figures
+
+Your blog supports professional figures with captions and multiple layout options. See `FIGURES.md` for complete documentation.
+
+**Basic usage:**
+```markdown
+{% include figure.html 
+   src="/images/your-image.jpg" 
+   alt="Alt text" 
+   caption="Your caption" %}
+```
+
+**Advanced usage with layouts:**
+```markdown
+{% include figure-advanced.html 
+   src="/images/your-image.jpg" 
+   alt="Alt text" 
+   caption="Your caption"
+   layout="left" 
+   size="medium" %}
+```
+
 ## Deployment
 
 The site automatically deploys via GitHub Actions when you push to the main branch. The workflow:

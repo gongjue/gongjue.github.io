@@ -1,17 +1,42 @@
 
 .highlight {
-  background-color: #efefef;
-  padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
-  margin: 20px 0 20px 0;
-  overflow: scroll;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border: 1px solid #e1e1e8;
+  border-radius: 6px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 code {
   font-family:'Menlo','Bitstream Vera Sans Mono','Courier', monospace;
+}
+
+// Simple line number alignment fix
+.highlight .lineno {
+  color: #999;
+  display: inline-block;
+  padding: 0 8px 0 0;
+  border-right: 1px solid #ddd;
+  margin-right: 8px;
+  min-width: 2em;
+  text-align: right;
+  user-select: none;
+  vertical-align: baseline;
+  line-height: 1.6;
+}
+
+// Ensure code inside highlight blocks inherits proper styling
+.highlight code {
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 1.6;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -82,3 +107,17 @@ code {
 .highlight .vg { color: #268BD2 } /* Name.Variable.Global */
 .highlight .vi { color: #268BD2 } /* Name.Variable.Instance */
 .highlight .il { color: #2AA198 } /* Literal.Number.Integer.Long */
+
+// Prevent line number wrapping and ensure proper table structure
+table.highlighttable {
+  overflow-x: auto;
+  display: block;
+}
+
+table.highlighttable td.code {
+  width: 100%;
+}
+
+pre code {
+  white-space: pre;
+}
