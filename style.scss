@@ -117,6 +117,85 @@ img {
   display: block;
 }
 
+// Table styling
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid $lightGray;
+  }
+  
+  th {
+    background-color: $lightGray;
+    font-weight: bold;
+    border-bottom: 2px solid $gray;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  // Responsive table
+  @include mobile {
+    font-size: 14px;
+    
+    th, td {
+      padding: 8px 10px;
+    }
+  }
+}
+
+// Mermaid diagram styling
+.mermaid {
+  text-align: center;
+  margin: 2em 0;
+  padding: 1.5em;
+  background: $white;
+  border: 1px solid $lightGray;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: $helvetica;
+  
+  // Override Mermaid's default styling
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Ensure consistent font sizes
+  .nodeLabel, .edgeLabel {
+    font-family: $helvetica;
+    font-size: 14px;
+  }
+  
+  // Node styling - light background fill
+  .node rect, .node circle, .node ellipse, .node polygon {
+    fill: #f8f9fa !important;
+    stroke: $lightGray !important;
+  }
+  
+  // Subgraph styling - remove background fill
+  .cluster rect {
+    stroke: $lightGray !important;
+    fill: transparent !important;
+  }
+  
+  @include mobile {
+    margin: 1.5em 0;
+    padding: 1em;
+    overflow-x: auto;
+  }
+}
+
 // Figure styles
 .figure {
   margin: 2em 0;
@@ -721,6 +800,51 @@ footer {
     background: #21262d;
     border-color: #30363d;
     color: #f0f6fc;
+  }
+  
+  // Table styling in dark mode
+  table {
+    th, td {
+      border-bottom-color: #30363d;
+    }
+    
+    th {
+      background-color: #21262d;
+      color: #f0f6fc;
+      border-bottom-color: #30363d;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+    
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+  
+  // Mermaid diagrams in dark mode
+  .mermaid {
+    background: #0d1117;
+    border-color: #30363d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    
+    // Dark mode text colors
+    .nodeLabel, .edgeLabel {
+      color: #f0f6fc;
+    }
+    
+    // Node styling in dark mode - light background fill
+    .node rect, .node circle, .node ellipse, .node polygon {
+      fill: #161b22 !important;
+      stroke: #30363d !important;
+    }
+    
+    // Subgraph styling in dark mode - remove background fill
+    .cluster rect {
+      stroke: #30363d !important;
+      fill: transparent !important;
+    }
   }
 }
 

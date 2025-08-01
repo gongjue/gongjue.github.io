@@ -25,6 +25,102 @@
         }
       };
     </script>
+    
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Mermaid with custom theme
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? {
+            // Dark mode colors
+            primaryColor: '#161b22',
+            primaryTextColor: '#f0f6fc',
+            primaryBorderColor: '#30363d',
+            lineColor: '#58a6ff',
+            secondaryColor: '#21262d',
+            tertiaryColor: '#0d1117',
+            background: '#0d1117',
+            darkMode: true,
+            fontFamily: 'system-ui, -apple-system, sans-serif'
+          } : {
+            // Light mode colors matching your site
+            primaryColor: '#f8f9fa',
+            primaryTextColor: '#24292f',
+            primaryBorderColor: '#d1d9e0',
+            lineColor: '#0969da',
+            secondaryColor: '#f0f6fc',
+            tertiaryColor: '#ffffff',
+            background: '#ffffff',
+            darkMode: false,
+            fontFamily: 'system-ui, -apple-system, sans-serif'
+          }
+        });
+        
+        // Convert code blocks with language 'mermaid' to mermaid diagrams
+        const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+        mermaidBlocks.forEach((block, index) => {
+          const code = block.textContent;
+          const pre = block.parentElement;
+          
+          // Create a new div for the mermaid diagram
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = code;
+          
+          // Replace the pre block with the mermaid div
+          pre.parentElement.replaceChild(mermaidDiv, pre);
+        });
+        
+        // Also handle code blocks with class 'mermaid' directly
+        const directMermaidBlocks = document.querySelectorAll('code.mermaid');
+        directMermaidBlocks.forEach((block, index) => {
+          const code = block.textContent;
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = code;
+          block.parentElement.replaceChild(mermaidDiv, block);
+        });
+        
+        // Now render all mermaid diagrams
+        mermaid.run();
+      });
+      
+      // Update theme when system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const isDark = e.matches;
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: isDark ? {
+            primaryColor: '#161b22',
+            primaryTextColor: '#f0f6fc',
+            primaryBorderColor: '#30363d',
+            lineColor: '#58a6ff',
+            secondaryColor: '#21262d',
+            tertiaryColor: '#0d1117',
+            background: '#0d1117',
+            darkMode: true,
+            fontFamily: 'system-ui, -apple-system, sans-serif'
+          } : {
+            primaryColor: '#f8f9fa',
+            primaryTextColor: '#24292f',
+            primaryBorderColor: '#d1d9e0',
+            lineColor: '#0969da',
+            secondaryColor: '#f0f6fc',
+            tertiaryColor: '#ffffff',
+            background: '#ffffff',
+            darkMode: false,
+            fontFamily: 'system-ui, -apple-system, sans-serif'
+          }
+        });
+        // Re-render existing diagrams
+        location.reload();
+      });
+    </script>
   </head>
 
   <body>
