@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Data Science to Production: Understanding the Value of API, SDK, CLI, and MCP Tools"
-date: 2025-08-14
+date: 2025-08-13
 categories: [Data Science, MLOps, API, Production]
 tags: [machine-learning, API-design, SDK, CLI, MCP, model-deployment, production]
 ---
