@@ -1,13 +1,16 @@
 # Jue Gong's Blog
 
-A modern Jekyll blog built with 2025 best practices, featuring automated deployment, SEO optimization, and responsive design.
+A modern bilingual Jekyll blog built with 2025 best practices, featuring automated deployment, SEO optimization, and responsive design. Now supporting both English and Chinese (中文) content.
 
 ## Features
 
+- **Bilingual Support (English/中文)** with smart language switching
+- **About Me as Default Page** for better personal branding
 - **Modern Jekyll 4.3** with latest plugins
 - **Automated GitHub Actions deployment**
 - **SEO optimized** with jekyll-seo-tag
 - **Responsive design** with dark mode support
+- **Chinese Typography** with Noto Sans SC font support
 - **Modern MathJax 3** for mathematical expressions
 - **Pagination and archives** for better content organization
 - **Performance optimized** with modern web standards
@@ -47,6 +50,32 @@ Visit `http://localhost:4000` to see your site.
 ```bash
 npm run build
 ```
+
+## Site Structure
+
+### Bilingual Navigation
+
+The site now supports both English and Chinese with the following structure:
+
+```
+English Pages:
+├── / → redirects to /about/ (default page)
+├── /about/ (About Me page)
+├── /blog/ (Blog listing)
+└── /blog/page2/, /blog/page3/ (pagination)
+
+Chinese Pages:
+├── /zh/ → redirects to /zh/about/ (中文首页)
+├── /zh/about/ (关于我页面)
+└── /zh/blog/ (博客列表)
+```
+
+### Language Switching
+
+- **Smart Navigation**: Language switcher automatically adjusts based on current page
+- **Context Preservation**: Switching languages maintains the same page type (About ↔ 关于我, Blog ↔ 博客)
+- **Clean URLs**: SEO-friendly URLs with proper language indicators
+- **Font Support**: Optimized Chinese typography with Noto Sans SC
 
 ## Writing Posts
 
@@ -179,6 +208,9 @@ npm run lint:css
 
 ## 2025 Modernization Features
 
+✅ **Bilingual Support (English/中文)** with smart language switching  
+✅ **About Me Default Page** for personal branding focus  
+✅ **Chinese Typography** with Noto Sans SC font optimization  
 ✅ **Jekyll 4.3** with modern plugin architecture  
 ✅ **GitHub Actions CI/CD** for automated deployment  
 ✅ **SEO optimization** with structured data and meta tags  

@@ -1,0 +1,54 @@
+---
+layout: default
+lang: zh
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+    <article class="post">    
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
+        {% if post.categories.size > 0 %}
+          <span class="post-categories">
+            {% for category in post.categories %}
+              <span class="post-category">{{ category }}</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+
+      <div class="entry">
+        {{ post.excerpt | strip_html | truncatewords: 50 }}
+      </div>
+      
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读更多</a>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-item newer">较新</a>
+  {% else %}
+    <span class="pagination-item newer">较新</span>
+  {% endif %}
+  
+  <span class="pagination-info">第 {{ paginator.page }} 页，共 {{ paginator.total_pages }} 页</span>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-item older">较旧</a>
+  {% else %}
+    <span class="pagination-item older">较旧</span>
+  {% endif %}
+</div>
+{% endif %}
+
+<div style="text-align: center; margin: 40px 0; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+  <h3>博客内容</h3>
+  <p>目前博客文章仍为英文版本。中文博客文章正在准备中，敬请期待！</p>
+  <p><a href="{{ site.baseurl }}/blog" style="color: #0366d6;">查看英文博客 →</a></p>
+</div>

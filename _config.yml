@@ -77,6 +77,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
+# Multi-language settings
+default_lang: en
+languages: [en, zh]
+
+# Language-specific configurations
+lang_names:
+  en: English
+  zh: 中文
+
+lang_descriptions:
+  en: Technical Leader with expertise in ML systems, data platforms, and team management
+  zh: 机器学习系统、数据平台和团队管理专家
+
 # SEO settings
 title: Jue Gong
 tagline: Industrial Engineering PhD Student at University of Washington
@@ -87,7 +100,7 @@ author:
 
 # Pagination settings (using jekyll-paginate for GitHub Pages compatibility)
 paginate: 5
-paginate_path: "/page:num/"
+paginate_path: "/blog/page:num/"
 
 # Exclude these files from your production _site
 exclude:
