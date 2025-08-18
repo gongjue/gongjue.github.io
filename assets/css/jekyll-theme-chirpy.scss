@@ -1,0 +1,78 @@
+---
+---
+
+@import 'main';
+
+/* Chinese font support */
+html[lang="zh-CN"],
+html[lang="zh"] {
+  font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+  
+  body {
+    font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+    font-weight: 500;
+  }
+  
+  .site-title {
+    font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+  }
+}
+
+/* Language switcher styles */
+.lang-switch {
+  background: #f0f6fc;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #e1e4e8;
+    border-color: #c6cbd1;
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode support for language switcher */
+@media (prefers-color-scheme: dark) {
+  .lang-switch {
+    background: #21262d;
+    border-color: #30363d;
+    color: #f0f6fc;
+    
+    &:hover {
+      background: #30363d;
+      border-color: #444c56;
+    }
+  }
+}
+
+/* Chinese text optimization */
+html[lang="zh-CN"] {
+  .post-content,
+  .page-content {
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  /* Better spacing for Chinese punctuation */
+  .post-content p,
+  .page-content p {
+    margin-bottom: 1.2em;
+  }
+}
+
+/* Google Fonts for Chinese support */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
