@@ -1,0 +1,12 @@
+---
+---
+
+/* Custom CSS for code block padding fix */
+.highlight {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.highlight code {
+  padding-left: 0 !important;
+}

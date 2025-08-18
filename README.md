@@ -1,26 +1,26 @@
 # Jue Gong's Blog
 
-A modern bilingual Jekyll blog built with 2025 best practices, featuring automated deployment, SEO optimization, and responsive design. Now supporting both English and Chinese (中文) content.
+A modern Jekyll blog built with the Chirpy theme, featuring automated deployment, bilingual support (silent), and modern web standards.
 
 ## Features
 
-- **Bilingual Support (English/中文)** with smart language switching
-- **About Me as Default Page** for better personal branding
-- **Modern Jekyll 4.3** with latest plugins
+- **Chirpy Theme v7.3.1** - Modern, responsive Jekyll theme
+- **Jekyll 4.4.1** with Ruby 3.4.5
 - **Automated GitHub Actions deployment**
 - **SEO optimized** with jekyll-seo-tag
-- **Responsive design** with dark mode support
-- **Chinese Typography** with Noto Sans SC font support
-- **Modern MathJax 3** for mathematical expressions
-- **Pagination and archives** for better content organization
+- **Responsive design** with dark/light mode toggle
+- **Mermaid diagram support** with theme-aware styling
+- **Code syntax highlighting** with customizable padding
+- **RSS/Atom feed** auto-generation
+- **Further Reading** recommendations based on tags/categories
+- **Bilingual foundation** (Chinese pages exist but silent)
 - **Performance optimized** with modern web standards
-- **Accessibility compliant** (WCAG 2.1 AA)
 
 ## Prerequisites
 
-- Ruby 3.1+ 
+- Ruby 3.3+ 
 - Bundler gem
-- Node.js 18+ (for development tools)
+- Jekyll 4.4+
 
 ## Local Development
 
@@ -30,52 +30,35 @@ A modern bilingual Jekyll blog built with 2025 best practices, featuring automat
 git clone https://github.com/gongjue/gongjue.github.io.git
 cd gongjue.github.io
 bundle install
-npm install
 ```
 
 ### 2. Run Development Server
 
 ```bash
 # Start Jekyll with live reload
-npm run serve
-
-# Or use bundle directly
 bundle exec jekyll serve --livereload
+
+# Build for production
+bundle exec jekyll build
 ```
 
 Visit `http://localhost:4000` to see your site.
 
-### 3. Build for Production
-
-```bash
-npm run build
-```
-
 ## Site Structure
 
-### Bilingual Navigation
-
-The site now supports both English and Chinese with the following structure:
+The site uses the Chirpy theme structure with these main sections:
 
 ```
-English Pages:
-├── / → redirects to /about/ (default page)
-├── /about/ (About Me page)
-├── /blog/ (Blog listing)
-└── /blog/page2/, /blog/page3/ (pagination)
+Navigation:
+├── Home (/)
+├── Categories (/categories/)
+├── Tags (/tags/)
+├── Archives (/archives/)
+└── About (/about/)
 
-Chinese Pages:
-├── /zh/ → redirects to /zh/about/ (中文首页)
-├── /zh/about/ (关于我页面)
-└── /zh/blog/ (博客列表)
+Posts:
+└── /:year/:month/:day/:title/ (SEO-friendly permalinks)
 ```
-
-### Language Switching
-
-- **Smart Navigation**: Language switcher automatically adjusts based on current page
-- **Context Preservation**: Switching languages maintains the same page type (About ↔ 关于我, Blog ↔ 博客)
-- **Clean URLs**: SEO-friendly URLs with proper language indicators
-- **Font Support**: Optimized Chinese typography with Noto Sans SC
 
 ## Writing Posts
 
@@ -86,141 +69,88 @@ Create new posts in the `_posts` directory with the format: `YYYY-MM-DD-title.md
 layout: post
 title: "Your Post Title"
 categories: [category1, category2]
-tags: [tag1, tag2]
+tags: [tag1, tag2, tag3]
 ---
 
 Your content here...
+
+## Mermaid Diagrams
+
+\`\`\`mermaid
+graph TD
+    A[Start] --> B[Process]
+    B --> C[End]
+\`\`\`
 ```
 
-### Adding Figures
+### Tag & Category Strategy
 
-Your blog supports professional figures with captions and multiple layout options. See `FIGURES.md` for complete documentation.
-
-**Basic usage:**
-```markdown
-{% include figure.html 
-   src="/images/your-image.jpg" 
-   alt="Alt text" 
-   caption="Your caption" %}
-```
-
-**Advanced usage with layouts:**
-```markdown
-{% include figure-advanced.html 
-   src="/images/your-image.jpg" 
-   alt="Alt text" 
-   caption="Your caption"
-   layout="left" 
-   size="medium" %}
-```
+For effective "Further Reading" recommendations:
+- **Categories**: Use broad topics (AI, Data Science, MLOps)
+- **Tags**: Use specific keywords (machine-learning, python, api-design)
+- **Consistency**: Maintain consistent naming across posts
 
 ## Deployment
 
-The site automatically deploys via GitHub Actions when you push to the main branch. The workflow:
+The site automatically deploys via GitHub Actions when you push to the main branch:
 
-1. Builds the Jekyll site
-2. Runs tests and linting
+1. Builds Jekyll site with Chirpy theme
+2. Generates RSS feed and sitemaps
 3. Deploys to GitHub Pages
 
 ## Configuration
 
 Key settings in `_config.yml`:
 
-- **Site info**: Update `name`, `description`, `url`
-- **Social links**: Configure `footer-links`
-- **Analytics**: Add your Google Analytics ID
-- **Comments**: Configure Disqus shortname
+- **Site info**: title, description, url
+- **Social links**: GitHub, Twitter, email
+- **Comments**: Disabled (provider: empty)
+- **Permalinks**: `/:year/:month/:day/:title/`
+- **Kramdown**: Syntax highlighting without line numbers
 
-## Moar!
+## Theme Customizations
 
-I've created a more detailed walkthrough, [**Build A Blog With Jekyll And GitHub Pages**](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/) over at the Smashing Magazine website. Check it out if you'd like a more detailed walkthrough and some background on Jekyll. :metal:
-
-It covers:
-
-- A more detailed walkthrough of setting up your Jekyll blog
-- Common issues that you might encounter while using Jekyll
-- Importing from Wordpress, using your own domain name, and blogging in your favorite editor
-- Theming in Jekyll, with Liquid templating examples
-- A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript support and Collections
-
-## Jekyll Now Features
-
-✓ Command-line free _fork-first workflow_, using GitHub.com to create, customize and post to your blog  
-✓ Fully responsive and mobile optimized base theme (**[Theme Demo](http://jekyllnow.com)**)  
-✓ Sass/Coffeescript support using Jekyll 2.0  
-✓ Free hosting on your GitHub Pages user site  
-✓ Markdown blogging  
-✓ Syntax highlighting  
-✓ Disqus commenting  
-✓ Google Analytics integration  
-✓ SVG social icons for your footer  
-✓ 3 http requests, including your avatar  
-
-✘ No installing dependancies  
-✘ No need to set up local development  
-✘ No configuring plugins  
-✘ No need to spend time on theming  
-✘ More time to code other things ... wait ✓!  
-
-## Questions?
-
-[Open an Issue](https://github.com/barryclark/jekyll-now/issues/new) and let's chat!
-
-## Other forkable themes
-
-You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-start) workflow with other themes that are set up to be forked too! Here are some of my favorites:
-
-- [Hyde](https://github.com/poole/hyde) by MDO
-- [Lanyon](https://github.com/poole/lanyon) by MDO
-- [mojombo.github.io](https://github.com/mojombo/mojombo.github.io) by Tom Preston-Werner
-- [Left](https://github.com/holman/left) by Zach Holman
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose
-- [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll) by Michael Rose
-
-## Credits
-
-- [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
-- [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons) - Thanks, Neil Orange Peel. They're beautiful. 
-- [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058) - Thanks, Edward.
-- [Joel Glovier](http://joelglovier.com/writing/) - Great Jekyll articles. I used Joel's feed.xml in this repository.
-- [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
-- [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
-
+- **Custom CSS**: `/assets/css/custom.css` for code block padding
+- **Mermaid Support**: Theme-aware diagram rendering
+- **RSS Feed**: Auto-generated at `/feed.xml`
+- **No Comments**: Disqus disabled for faster loading
 
 ## Development Commands
 
 ```bash
 # Install dependencies
-bundle install && npm install
+bundle install
 
 # Start development server
-npm run serve
+bundle exec jekyll serve --livereload
 
 # Build for production
-npm run build
+bundle exec jekyll build
 
-# Run tests
-npm run test
-
-# Lint CSS
-npm run lint:css
+# Check for updates
+bundle update
 ```
 
-## 2025 Modernization Features
+## Migration History
 
-✅ **Bilingual Support (English/中文)** with smart language switching  
-✅ **About Me Default Page** for personal branding focus  
-✅ **Chinese Typography** with Noto Sans SC font optimization  
-✅ **Jekyll 4.3** with modern plugin architecture  
-✅ **GitHub Actions CI/CD** for automated deployment  
-✅ **SEO optimization** with structured data and meta tags  
-✅ **Responsive design** with CSS Grid and Flexbox  
-✅ **Dark mode support** respecting system preferences  
-✅ **Modern MathJax 3** for mathematical expressions  
-✅ **Accessibility compliance** (WCAG 2.1 AA)  
-✅ **Performance optimized** with lazy loading and compression  
-✅ **Security headers** and Content Security Policy  
-✅ **Modern development workflow** with linting and testing  
+- **2025-08**: Migrated from Jekyll Now to Chirpy theme
+- **Ruby**: Upgraded from 2.6.10 to 3.4.5
+- **Jekyll**: Upgraded to 4.4.1
+- **Features**: Added Mermaid support, custom CSS, improved navigation
+
+## RSS Feed
+
+RSS/Atom feed is automatically available at:
+- **URL**: `https://gongjue.github.io/feed.xml`
+- **Format**: Atom 1.0 with full post content
+- **Auto-updates**: Regenerated on each build
+
+## Credits
+
+- [Jekyll](https://github.com/jekyll/jekyll) - Static site generator
+- [Chirpy Theme](https://github.com/cotes2020/jekyll-theme-chirpy) - Beautiful Jekyll theme
+- [Mermaid](https://mermaid.js.org/) - Diagram generation
+- [GitHub Actions](https://github.com/features/actions) - CI/CD automation
 
 ## License
 
