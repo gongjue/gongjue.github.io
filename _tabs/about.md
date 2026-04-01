@@ -50,6 +50,5 @@ AI/ML Engineer with 6+ years of experience building production AI systems and da
 
 ## Contact
 
-- **Email**: [dukegj@gmail.com](mailto:dukegj@gmail.com)
 - **LinkedIn**: [linkedin.com/in/gongjue](https://www.linkedin.com/in/gongjue)
 - **GitHub**: [github.com/gongjue](https://github.com/gongjue)
