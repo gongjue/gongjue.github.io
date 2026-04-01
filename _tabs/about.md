@@ -1,70 +1,55 @@
 ---
-# the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 # About Me
 
-I am a Technical Leader with expertise in ML systems, data platforms, and team management. Currently pursuing Industrial Engineering PhD at University of Washington with focus on data-driven optimization and machine learning applications.
+AI/ML Engineer with 6+ years of experience building production AI systems and data infrastructure. I specialize in taking AI from prototype to production — from fine-tuned model serving to agent systems that operate on real business data.
 
 ## Professional Experience
 
-**Principal Engineer & Technical Lead** at various companies, specializing in:
-- Machine Learning Systems Architecture and Implementation
-- Data Platform Engineering and Infrastructure
-- Cross-functional Team Leadership and Technical Strategy
-- Scalable System Design and Performance Optimization
+**Principal Machine Learning Engineer** — Magnify (2024-2025)
+- Built semantic data layer and ML evaluation pipeline for customer success automation platform
+- Designed agent reliability framework with tool-limit middleware and LangSmith eval pipeline
+- Led canonical data model initiative unifying fragmented data sources
 
-## Academic Background
+**Tech Lead, ML/AI Platform** — AstrumU (2019-2024)
+- Led 6-person AI/ML team building talent intelligence platform (entity resolution at scale)
+- Architected multi-model serving with Ray Serve + vLLM: 10K+ entities/day online, 1M+ daily batch
+- Fine-tuned Qwen-2.5 with LoRA SFT for structured extraction, achieving 1-2 orders of magnitude cost reduction vs API
+- Built event-driven data pipelines with Kafka CDC + Dagster, replacing Databricks with unified PostgreSQL platform
 
-**Industrial Engineering PhD Student** - University of Washington  
-*Focus areas: Data-driven optimization, machine learning applications in operations research*
+**Independent Consulting** — Haishi AI Agent (2025-present)
+- Solo 0→1 AI agent for manufacturing ERP: schema design, RAG, SQL tools, ERP write-back, frontend, deployment
+- 6,600+ customers synced, automated reports, lead discovery pipeline
+- Production system with real users — not a demo
 
-I receive Ph.D. in Industrial Engineering at University of Washington. My research interests are applying methods of artificial intelligence to healthcare problems. My work focuses on building clinical decision support (CDS) systems, the computer assistant to the diagnosis of diseases.
+## Education
 
-## Technical Expertise
+**Ph.D., Industrial & Systems Engineering** — University of Washington
+- Research: Data-driven medical decision making, reinforcement learning for clinical decision support
 
-### Machine Learning & AI
-- **ML Systems**: End-to-end ML pipeline design, model deployment, and monitoring
-- **Data Engineering**: Large-scale data processing, ETL pipelines, real-time analytics
-- **Algorithm Development**: Custom algorithm design for optimization and prediction problems
+## Publications
 
-### Engineering & Leadership
-- **System Architecture**: Distributed systems, microservices, cloud-native applications
-- **Team Management**: Technical mentoring, cross-functional collaboration, strategic planning
-- **Performance Engineering**: System optimization, scalability planning, reliability engineering
+- **Gong, J.**, & Liu, S. (2023). Partially observable collaborative model for optimizing personalized treatment selection. *European Journal of Operational Research*, 309(3), 1409-1419. [doi:10.1016/j.ejor.2023.03.014](https://doi.org/10.1016/j.ejor.2023.03.014)
+- **Gong, J.**, Simon, G.E., & Liu, S. (2019). Machine learning discovery of longitudinal patterns of depression and suicidal ideation. *PLOS ONE*, 14(9): e0222665. [doi:10.1371/journal.pone.0222665](https://doi.org/10.1371/journal.pone.0222665)
 
-## Research & Publications
+## Patents
 
-**Machine Learning Applications in Operations Research**
-
-### Publications
-
-- **Gong, J.**, & Liu, S. (2019). *Optimizing personalized treatment selection for partially observable chronic conditions*. [University of Washington Libraries]. [link](https://orbiscascade-washington.primo.exlibrisgroup.com/permalink/01ALLIANCE_UW/1jv7c00/alma99162255157401452)
-- **Gong J**, Simon GE, Liu S (2019) Machine learning discovery of longitudinal patterns of depression and suicidal ideation. *PLOS ONE* 14(9): e0222665. [https://doi.org/10.1371/journal.pone.0222665](https://doi.org/10.1371/journal.pone.0222665)
-- **Gong, J.**, & Liu, S. (2023). Partially observable collaborative model for optimizing personalized treatment selection, *European Journal of Operational Research*, Volume 309,Issue 3, Pages 1409-1419, ISSN 0377-2217, [https://doi.org/10.1016/j.ejor.2023.03.014](https://doi.org/10.1016/j.ejor.2023.03.014).
-
-### Patents
-
-- Wray, A. J., Pedersen, K. O. P., Cai, X., & **Gong, J.** (2024). Predictive learner score (U.S. Patent No. 11,922,332). U.S. Patent and Trademark Office.
-- Wray, A. J., Pedersen, K. O. P., Cai, X., & **Gong, J.** (2024). Predictive learner recommendation platform (U.S. Patent No. 11,928,607). U.S. Patent and Trademark Office.
+- Wray, A. J., Pedersen, K. O. P., Cai, X., & **Gong, J.** (2024). Predictive learner score (U.S. Patent No. 11,922,332).
+- Wray, A. J., Pedersen, K. O. P., Cai, X., & **Gong, J.** (2024). Predictive learner recommendation platform (U.S. Patent No. 11,928,607).
 
 ## Technical Skills
 
-**Programming Languages**: Python, Java, Scala, R, JavaScript, Go  
-**ML/Data Tools**: TensorFlow, PyTorch, Scikit-learn, Pandas, Spark, Kafka  
-**Cloud Platforms**: AWS, GCP, Azure  
-**Databases**: PostgreSQL, MongoDB, Redis, Elasticsearch  
-**Infrastructure**: Docker, Kubernetes, Terraform, CI/CD
+**AI/ML**: LLM, AI Agent, RAG, Claude API, OpenAI API, vLLM, Ray Serve, PyTorch, Scikit-learn
+**Data**: dbt, Dagster, Kafka, Spark, PostgreSQL, pgvector, Snowflake, DuckDB
+**Infrastructure**: Docker, Kubernetes, FastAPI, AWS, GCP
+**Frontend**: React, TypeScript, Next.js, Tailwind CSS
+**Languages**: Python, JavaScript/TypeScript, SQL, R
 
 ## Contact
 
 - **Email**: [dukegj@gmail.com](mailto:dukegj@gmail.com)
 - **LinkedIn**: [linkedin.com/in/gongjue](https://www.linkedin.com/in/gongjue)
 - **GitHub**: [github.com/gongjue](https://github.com/gongjue)
-- **Twitter**: [@dukegj](https://twitter.com/dukegj)
-
----
-
-*Looking for opportunities to collaborate on interesting problems at the intersection of machine learning, data engineering, and business impact.*
