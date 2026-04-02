@@ -5,22 +5,22 @@ order: 5
 
 # About Me
 
-AI/ML Engineer with 6+ years of experience building production AI systems and data infrastructure. I specialize in taking AI from prototype to production — from fine-tuned model serving to agent systems that operate on real business data.
+AI/ML Engineer with 8+ years of experience building production AI systems and data infrastructure. I specialize in taking AI from prototype to production — from fine-tuned model serving to agent systems that operate on real business data.
 
 ## Professional Experience
 
-**Principal Machine Learning Engineer** — Magnify (2024-2025)
+**Principal Machine Learning Engineer** — [Magnify](https://www.magnify.io/) (2024-2025)
 - Built semantic data layer and ML evaluation pipeline for customer success automation platform
 - Designed agent reliability framework with tool-limit middleware and LangSmith eval pipeline
 - Led canonical data model initiative unifying fragmented data sources
 
-**Tech Lead, ML/AI Platform** — AstrumU (2019-2024)
+**Tech Lead, ML/AI Platform** — [AstrumU](https://www.astrumu.com/) (2019-2024)
 - Led 6-person AI/ML team building talent intelligence platform (entity resolution at scale)
 - Architected multi-model serving with Ray Serve + vLLM: 10K+ entities/day online, 1M+ daily batch
 - Fine-tuned Qwen-2.5 with LoRA SFT for structured extraction, achieving 1-2 orders of magnitude cost reduction vs API
 - Built event-driven data pipelines with Kafka CDC + Dagster, replacing Databricks with unified PostgreSQL platform
 
-**Independent Consulting** — Haishi AI Agent (2025-present)
+**Independent Consulting** — [Haishi Optoelectronics](http://www.dfhais.com/en/)  (2025-present)
 - Solo 0→1 AI agent for manufacturing ERP: schema design, RAG, SQL tools, ERP write-back, frontend, deployment
 - 6,600+ customers synced, automated reports, lead discovery pipeline
 - Production system with real users — not a demo
@@ -29,6 +29,7 @@ AI/ML Engineer with 6+ years of experience building production AI systems and da
 
 **Ph.D., Industrial & Systems Engineering** — University of Washington
 - Research: Data-driven medical decision making, reinforcement learning for clinical decision support
+- Dissertation: [Optimizing Personalized Treatment Selection for Partially Observable Chronic Conditions](https://digital.lib.washington.edu/researchworks/items/36fc88d5-db30-498f-bcb8-a61f3edccab6)
 
 ## Publications
 
@@ -42,11 +43,11 @@ AI/ML Engineer with 6+ years of experience building production AI systems and da
 
 ## Technical Skills
 
-**AI/ML**: LLM, AI Agent, RAG, Claude API, OpenAI API, vLLM, Ray Serve, PyTorch, Scikit-learn
-**Data**: dbt, Dagster, Kafka, Spark, PostgreSQL, pgvector, Snowflake, DuckDB
-**Infrastructure**: Docker, Kubernetes, FastAPI, AWS, GCP
-**Frontend**: React, TypeScript, Next.js, Tailwind CSS
-**Languages**: Python, JavaScript/TypeScript, SQL, R
+- **AI/ML**: LLM, AI Agent, RAG, Claude API, OpenAI API, vLLM, Ray Serve, PyTorch, Scikit-learn
+- **Data**: dbt, Dagster, Kafka, Spark, PostgreSQL, pgvector, Snowflake, DuckDB
+- **Infrastructure**: Docker, Kubernetes, FastAPI, AWS, GCP
+- **Frontend**: React, TypeScript, Next.js, Tailwind CSS
+- **Languages**: Python, JavaScript/TypeScript, SQL, R
 
 ## Contact
 
